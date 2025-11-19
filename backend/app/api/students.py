@@ -4,6 +4,8 @@ from typing import List
 from datetime import datetime
 import pandas as pd
 from io import BytesIO
+
+from .dependencies import get_current_user
 # from .core.database import get_db
 from ..core.security import get_password_hash
 from ..models.user import User, UserRole
@@ -20,7 +22,7 @@ router = APIRouter()
 @router.post("/", response_model=StudentResponse)
 async def create_student(
     student_data: StudentCreate,
-    db: Session = Depends(get_db()),
+    db: Session = Depends(get_db),
     current_user: User = Depends(get_current_superuser_or_admin)
 ):
     """Create a new student"""
