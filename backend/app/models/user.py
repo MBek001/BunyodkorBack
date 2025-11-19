@@ -26,6 +26,6 @@ class User(Base):
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     # Relationships
-    permissions = relationship("UserPermission", back_populates="user", cascade="all, delete-orphan")
+    permissions = relationship("UserPermission", back_populates="user", cascade="all, delete-orphan", foreign_keys="UserPermission.user_id")
     student_profile = relationship("Student", back_populates="user", uselist=False)
     teacher_groups = relationship("Group", back_populates="teacher")
