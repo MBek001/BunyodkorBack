@@ -38,7 +38,7 @@ npm install
 Copy `.env.example` to `.env`:
 
 ```bash
-cp .env.example .env
+cp .env .env
 ```
 
 Edit `.env` to set your backend URL:

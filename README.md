@@ -135,7 +135,7 @@ createdb bunyodkor_db
 
 4. Configure environment:
 ```bash
-cp .env.example .env
+cp .env .env
 # Edit .env with your database credentials and settings
 ```
 
@@ -162,7 +162,7 @@ npm install
 
 2. Configure environment:
 ```bash
-cp .env.example .env
+cp .env .env
 # Edit .env to set VITE_API_URL if needed
 ```
 
