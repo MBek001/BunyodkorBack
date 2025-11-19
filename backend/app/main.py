@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.core.config import settings
-from app.core.database import Base, engine
-from app.api import auth, users, students, groups, contracts, payments, attendance, turnstile, reports
+
+from .core.config import settings
+from .core.database import Base, engine
+from .api import auth, users, students, groups, contracts, payments, attendance, turnstile, reports
 
 # Create database tables
 Base.metadata.create_all(bind=engine)

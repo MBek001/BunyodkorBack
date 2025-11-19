@@ -37,7 +37,7 @@ pip install -r requirements.txt
 Copy `.env.example` to `.env` and update with your settings:
 
 ```bash
-cp .env.example .env
+cp .env .env
 ```
 
 Edit `.env`:
