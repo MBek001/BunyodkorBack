@@ -4,17 +4,14 @@ from typing import List
 from datetime import datetime
 import pandas as pd
 from io import BytesIO
-
-from .dependencies import get_current_user
-# from .core.database import get_db
-from ..core.security import get_password_hash
-from ..models.user import User, UserRole
-from ..models.student import Student
-from ..models.group import Group
-from ..models.contract import Contract, ContractStatus
-from ..schemas.student import StudentCreate, StudentUpdate, StudentResponse
-from ..api.dependencies import get_current_admin, get_current_superuser_or_admin, check_permission
-from ..core.database import get_db
+from app.core.database import get_db
+from app.core.security import get_password_hash
+from app.models.user import User, UserRole
+from app.models.student import Student
+from app.models.group import Group
+from app.models.contract import Contract, ContractStatus
+from app.schemas.student import StudentCreate, StudentUpdate, StudentResponse
+from app.api.dependencies import get_current_admin, get_current_superuser_or_admin, get_current_user, check_permission
 
 router = APIRouter()
 
