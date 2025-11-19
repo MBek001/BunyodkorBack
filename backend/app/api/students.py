@@ -11,7 +11,7 @@ from app.models.student import Student
 from app.models.group import Group
 from app.models.contract import Contract, ContractStatus
 from app.schemas.student import StudentCreate, StudentUpdate, StudentResponse
-from app.api.dependencies import get_current_admin, get_current_superuser_or_admin, check_permission
+from app.api.dependencies import get_current_admin, get_current_superuser_or_admin, get_current_user, check_permission
 
 router = APIRouter()
 
